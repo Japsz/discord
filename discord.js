@@ -1,3 +1,4 @@
+require('dotenv').config()
 const Discord = require('discord.js')
 const client = new Discord.Client()
 const catFacts = require('./apis/catFacts')
@@ -24,4 +25,4 @@ client.on('message', msg => {
   }
 })
 
-client.login('NzU0MjA5MzYxNDA4MTYzODQx.X1xaNA.gQPOme8uGJunS7fvO4aFWCJeSE0')
+client.login(process.env.DISCORD_TOKEN)
